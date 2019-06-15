@@ -3,12 +3,14 @@
 <suite name="tests">
 	
 	<listeners>
-		<listener class-name="com.tgweb.runner.NGTestListener" />
+		<!-- <listener class-name="com.tgweb.runner.NGTestListener" /> -->
 	</listeners>
 	
 	<test name="TG Web Functional Testing Scenario">
 		<classes>
-			<class name="com.tgweb.runner.CucumberRunner"></class>
+			<class name="com.matrix.tests.LoginTest"></class>
+			<class name="com.matrix.tests.DashboardTest"></class>
+			<class name="com.matrix.tests.SingaporeBetTest"></class>
 		</classes>
 	</test>
 </suite>
