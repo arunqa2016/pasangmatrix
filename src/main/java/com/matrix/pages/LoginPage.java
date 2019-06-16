@@ -53,8 +53,8 @@ public class LoginPage extends Base {
 		Support.waitFor5Seconds();
 		Assert.assertTrue(agree.isDisplayed());
 		agree.click();
-		String currentUrl = driver.getCurrentUrl();
-		System.out.println("Current URL is - " + currentUrl);
+		//String currentUrl = driver.getCurrentUrl();
+		//System.out.println("Current URL is - " + currentUrl);
 		Support.waitFor5Seconds();
 		
 	}

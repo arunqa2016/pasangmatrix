@@ -42,11 +42,11 @@ public class LoginTest extends Base {
 		loginPage = PageFactory.initElements(driver, LoginPage.class);
 		
 		loginPage.validateLoginFunctionality(prop.getProperty("username"), prop.getProperty("password"));
-		String actualURL = prop.getProperty("DashboardURL");
+		String actualURL = prop.getProperty("url");
 		System.out.println("Actual URL is : " + " " + actualURL);
 		String currentURL = loginPage.currentURL();
 		System.out.println("Dashboard page URL is : " + " " + currentURL);
-		if(!currentURL.equals(actualURL)) {
+		if(currentURL.equals(actualURL)) {
 			//Assert.assertEquals(actualURL, currentURL, "URL not matched on Dashboard Page");
 			logger.log(LogStatus.FAIL, "<a href='https://www.pasangmatrix.net/dashboard'>"+currentURL+"</a>"+" "+"and"+" " + actualURL);
 		}else {	
