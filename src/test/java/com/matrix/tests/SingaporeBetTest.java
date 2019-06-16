@@ -1,5 +1,7 @@
 package com.matrix.tests;
 
-public class SingaporeBetTest {
+import com.matrix.base.Base;
+
+public class SingaporeBetTest extends Base {
 
 }

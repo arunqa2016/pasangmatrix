@@ -1,5 +1,7 @@
 package com.matrix.pages;
 
-public class SingaporePage {
+import com.matrix.base.Base;
+
+public class SingaporePage extends Base {
 
 }

@@ -14,23 +14,23 @@ public class Support extends Base {
 	@FindBy(how = How.XPATH, using = "btn btn-primary") @CacheLookup WebElement clickOK;
 	@FindBy(how = How.XPATH, using = "btn btn-default") @CacheLookup WebElement clickBATAL;
 	
-	public static JavascriptExecutor jse = (JavascriptExecutor)driver;
+	public JavascriptExecutor jse = (JavascriptExecutor)driver;
 	
 	public static void waitFor5Seconds() throws InterruptedException {
 		Thread.sleep(5000);
 	}
 
-	public static void waitFor3Seconds() throws InterruptedException {
+	public void waitFor3Seconds() throws InterruptedException {
 		//Thread.sleep(2000);
 	}
 
-	public static void scrollPage(WebDriver driver) {
+	public void scrollPage(WebDriver driver) {
 		
 		jse.executeScript("window.scrollBy(0,300)", "");
 		System.out.println("Page scrolled Down and JS called");
 	}
 	
-public static void scrollUpPage(WebDriver driver) {
+	public void scrollUpPage(WebDriver driver) {
 		
 		jse.executeScript("window.scrollBy(0,-300)", "");
 		System.out.println("Page scrolled UP and JS called");
@@ -45,4 +45,5 @@ public static void scrollUpPage(WebDriver driver) {
 		//wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("btn btn-default")));
 		clickBATAL.click();
 	}
+	
 }

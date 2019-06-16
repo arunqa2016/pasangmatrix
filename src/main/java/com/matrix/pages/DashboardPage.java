@@ -1,5 +1,7 @@
 package com.matrix.pages;
 
-public class DashboardPage {
+import com.matrix.base.Base;
+
+public class DashboardPage extends Base {
 
 }

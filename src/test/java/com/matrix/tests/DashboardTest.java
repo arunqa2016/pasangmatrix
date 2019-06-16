@@ -1,5 +1,7 @@
 package com.matrix.tests;
 
-public class DashboardTest {
+import com.matrix.base.Base;
+
+public class DashboardTest extends Base {
 
 }

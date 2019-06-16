@@ -23,8 +23,8 @@ public class Base {
 	public static ExtentTest logger;
 	public static Properties prop;
 	public static WebDriverWait wait;
-	private String propPath = "E:\\Arun Backup Data\\workspace-eclipse\\TGWEB-OFFICE\\src\\main\\java\\com\\tgweb\\config\\config.properties";
-	private static String reportLocation = "E:\\Automation_Reports\\PasangMatrix_Web_AutomationReport.html";
+	private String propPath = "E:\\Arun Backup Data\\workspace-eclipse\\Pasangmatrix\\src\\main\\java\\com\\matrix\\config\\config.properties";
+	private static String reportLocation = "E:\\Automation_Reports\\PasangMatrix_Web_Report.html";
 
 	public Base() {
 		
@@ -45,21 +45,19 @@ public class Base {
 	@BeforeSuite
 	public static void initialize() throws FileNotFoundException,IOException {
 		System.setProperty("webdriver.chrome.driver", "C:\\chromedriver.exe");
-		/*ChromeOptions options = new ChromeOptions();
-		options.addArguments("window-size=1400,800");
-		options.addArguments("headless");*/
+	
 		driver = new ChromeDriver();
 		wait = new WebDriverWait(driver, 20);
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("url"));
 		extent = new ExtentReports(reportLocation);
 	//	String reportConfigPath = prop.getProperty("reportConfigPath");
-		System.out.println("---------- 1. Base class initialized ----------.");
+		System.out.println("---------- 1. Base class initialized (In Before Suite) ----------.");
 	}
 	
 	@AfterSuite
 	public static void tearDown() {
-		System.out.println("---------- 4. In EndTest method.----------");
+		System.out.println("---------- 4. In tearDown method (In After Suite) ----------");
 		extent.endTest(logger);
 		extent.flush();
 		driver.get(reportLocation);
